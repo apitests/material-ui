@@ -133,7 +133,7 @@ let Tabs = React.createClass({
           {tabs}
         </div>
         <InkBar left={left} width={width} style={this.props.inkBarStyle}/>
-        <div className={classNames(this.props.tabItemContainerClassName)}
+        <div className={classNames(this.props.contentContainerClassName)}
              style={this.mergeAndPrefix(this.props.contentContainerStyle)}>
           {tabContent}
         </div>
