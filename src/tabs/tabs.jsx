@@ -16,6 +16,7 @@ let Tabs = React.createClass({
   },
 
   propTypes: {
+    className: React.PropTypes.string,
     initialSelectedIndex: React.PropTypes.number,
     onActive: React.PropTypes.func,
     tabWidth: React.PropTypes.number,
@@ -125,7 +126,8 @@ let Tabs = React.createClass({
     }, this);
 
     return (
-      <div style={this.mergeAndPrefix(this.props.style)}>
+      <div className={this.props.className}
+           style={this.mergeAndPrefix(this.props.style)}>
         <div className={classNames(this.props.tabItemContainerClassName)}
              style={this.mergeAndPrefix(styles.tabItemContainer, this.props.tabItemContainerStyle)}>
           {tabs}
